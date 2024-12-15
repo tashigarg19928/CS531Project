@@ -97,7 +97,11 @@ async def login(
     user = get_user_by_username(username)
     if user and verify_password(password, user["password"]):
         response = templates.TemplateResponse("home.html", {"request": request, "user": user})
-        response.set_cookie(key="user_id", value=str(user["_id"]))
+        response.set_cookie(
+                key="user_id",
+                value=str(user["_id"]),
+                max_age=30 * 60  # Cookie validity: 30 minutes
+            )
         return response
     return templates.TemplateResponse("login.html", {"request": request, "error": "Invalid credentials"})
 

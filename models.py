@@ -188,17 +188,3 @@ def reset_db():
 # Initialize the database
 init_db()
 
-# Example usage
-# if __name__ == "__main__":
-#     reset_db()
-#     create_user("testuser", "password123", "profile.png")
-#     user = get_user_by_username("testuser")
-#     user_id = user["_id"]
-#     create_expense(user_id, "Food", 15.0, "2024-11-21", "Lunch at a cafe")
-#     create_income(user_id, "Job", 2000.0, "2024-11-20")
-#     create_goal(user_id, "Save for a car", 15000.0, 5000.0)
-
-#     print(get_user_by_username("testuser"))
-#     print(get_expenses_by_user_id(user_id))
-#     print(get_income_by_user_id(user_id))
-#     print(get_goals_by_user_id(user_id))
